@@ -25,4 +25,5 @@ rules:
       - namespaces
       - pods
       - replicasets
+      - services
       - statefulsets

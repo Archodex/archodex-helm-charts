@@ -3,7 +3,7 @@
 # Declare variables to be passed into your templates.
 
 image:
-  repository: ghcr.io/txase/archodex-agent-ebpf
+  repository: ghcr.io/archodex/archodex-agent
   pullPolicy: Always
   tag: latest
 
