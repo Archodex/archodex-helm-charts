@@ -1,0 +1,27 @@
+# =========================================================================
+# Local overrides for archodex-agent development
+#
+# Copy to values.local.yaml and edit freely for your own development
+# =========================================================================
+
+# image:
+  # repository: ghcr.io/<user>/archodex-agent
+  # tag: local-dev
+
+# environment:
+  # Provide VAULT_ADDR for the hashivorp_vault ruleset
+  # - name: VAULT_ADDR
+    # value: "https://vault.vault:8200"
+
+  # Enable specific rulesets
+  # - name: ARCHODEX_ENABLE_RULESETS
+  #   value: "hashicorp_vault@v1"
+  # Disable specific rulesets
+  # - name: ARCHODEX_DISABLE_RULESETS
+  #   value: "github_actions@v1,stripe@v1"
+
+  # Enable Debug logging
+  # - name: RUST_LOG
+    # value: "archodex_agent::engine=debug,info"
+  # - name: RUST_BACKTRACE
+  #   value: "1"
