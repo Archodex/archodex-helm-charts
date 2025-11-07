@@ -50,11 +50,11 @@ spec:
               mountPath: /config/rules
               readOnly: true
           env:
-          {{- if .Values.reportApiKeySecretName }}
+          {{- if or .Values.reportApiKeySecretName .Values.reportApiKey }}
             - name: ARCHODEX_REPORT_API_KEY
               valueFrom:
                 secretKeyRef:
-                  name: {{ .Values.reportApiKeySecretName }}
+                  name: {{ .Values.reportApiKeySecretName | default (printf "%s-report-api-key" (include "archodex-agent.fullname" .)) }}
                   key: value
           {{- end }}
           {{- with .Values.environment }}

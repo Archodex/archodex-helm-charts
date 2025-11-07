@@ -7,9 +7,11 @@ image:
   pullPolicy: Always
   tag: latest
 
-# Specify the report API key secret name to use. If you do not specify a key (or
-# leave it empty), the agent will not report logs.
+# Specify the report API key - if not provided, the agent will not report logs.
+# Option 1: Reference an existing Kubernetes secret (recommended for production)
 reportApiKeySecretName: ""
+# Option 2: Provide the API key directly (for easy testing)
+reportApiKey: ""
 
 # Log captured resources and events when reports will (or would) be sent to the
 # Archodex service. This defaults to 'true' when reportApiKeySecretName is not
